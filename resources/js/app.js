@@ -7,8 +7,10 @@ import App from '~/components/App'
 import '~/plugins'
 import '~/components'
 
-Vue.config.productionTip = false
+import dateFullFilter from '~/filters/date-full'
 
+Vue.config.productionTip = false
+Vue.filter('dateFull', dateFullFilter)
 /* eslint-disable no-new */
 new Vue({
   i18n,

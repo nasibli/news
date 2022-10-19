@@ -22,6 +22,6 @@ export default [
       { path: 'password', name: 'settings.password', component: page('settings/password.vue') }
     ]
   },
-
+  { path: '/news/:id', name: 'news', component: page('news.vue') },
   { path: '*', component: page('errors/404.vue') }
 ]

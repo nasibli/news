@@ -29,7 +29,7 @@ class NewsCommentService
             if ($newsComment['parent_id'] === null) {
                 $result['newsComments'][] = $newsComment;
             } else {
-                $result['subComments'][$newsComment['id']][] = $newsComment;
+                $result['subComments'][$newsComment['parent_id']][] = $newsComment;
             }
         }
 
