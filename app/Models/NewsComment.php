@@ -15,4 +15,14 @@ class NewsComment extends Model
     {
         return $this->belongsTo(News::class);
     }
+
+    public function parent()
+    {
+        return $this->belongsTo(NewsComment::class, 'parent_id');
+    }
+
+    public function children()
+    {
+        return $this->hasMany(NewsComment::class, 'parent_id');
+    }
 }
